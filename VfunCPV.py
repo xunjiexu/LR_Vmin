@@ -1,0 +1,8 @@
+from math import cos 
+fieldLength=15
+cLength=17
+def V(fields,couplings):
+	(k1,k2,x1,x2,x3,y1,y2,y3,t2,f1,f2,f3,g1,g2,g3)=fields
+	(m1q,m2q,m3q,L1,L2,L3,L4,r1,r2,r3,r4,a1,a2,a3,b1,b2,b3)=couplings
+	return (k1**4*L1 + k2**4*L1 + 2*k2**2*(-m1q + a3*(x1**2 + x2**2 + y1**2 + y2**2) + a1*(x1**2 + 2*x2**2 + x3**2 + y1**2 + 2*y2**2 + y3**2)) + 2*k1**2*(k2**2*(L1 + 2*L3) - m1q + a3*(x2**2 + x3**2 + y2**2 + y3**2) + a1*(x1**2 + 2*x2**2 + x3**2 + y1**2 + 2*y2**2 + y3**2)) + 4*(4*r2*x2**4 + 4*r2*x1**2*x3**2 + r3*x1**2*y1**2 + 2*r3*x2**2*y1**2 + r3*x3**2*y1**2 + 2*r3*x1**2*y2**2 + 4*r3*x2**2*y2**2 + 2*r3*x3**2*y2**2 + 4*r2*y2**4 + (r3*(x1**2 + 2*x2**2 + x3**2) + 4*r2*y1**2)*y3**2 - m3q*(x1**2 + 2*x2**2 + x3**2 + y1**2 + 2*y2**2 + y3**2) + r1*((x1**2 + 2*x2**2 + x3**2)**2 + (y1**2 + 2*y2**2 + y3**2)**2)))/4. + 8*r2*x1*x2**2*x3*cos(f1 - 2*f2 + f3) + b2*k1**2*x1*y1*cos(f1 - g1) + 8*r4*x2**2*y2**2*cos(2*f2 - 2*g2) + 8*r4*x1*x3*y2**2*cos(f1 + f3 - 2*g2) + b1*k1**2*x2*y2*cos(f2 - g2) + b1*k2**2*x2*y2*cos(f2 - g2) + b3*k1**2*x3*y3*cos(f3 - g3) + 8*r4*x2**2*y1*y3*cos(2*f2 - g1 - g3) + 8*r4*x1*x3*y1*y3*cos(f1 + f3 - g1 - g3) + 8*r2*y1*y2**2*y3*cos(g1 - 2*g2 + g3) + b3*k2**2*x1*y1*cos(f1 - g1 - 2*t2) + b1*k1*k2*x1*y1*cos(f1 - g1 - t2) + 2*b3*k1*k2*x2*y2*cos(f2 - g2 - t2) + k1**3*k2*L4*cos(t2) + k1*k2**3*L4*cos(t2) - 2*k1*k2*m2q*cos(t2) + 2*a2*k1*k2*x1**2*cos(t2) + 4*a2*k1*k2*x2**2*cos(t2) + 2*a2*k1*k2*x3**2*cos(t2) + 2*a2*k1*k2*y1**2*cos(t2) + 4*a2*k1*k2*y2**2*cos(t2) + 2*a2*k1*k2*y3**2*cos(t2) + 2*k1**2*k2**2*L2*cos(2*t2) + 2*b2*k1*k2*x2*y2*cos(f2 - g2 + t2) + b1*k1*k2*x3*y3*cos(f3 - g3 + t2) + b2*k2**2*x3*y3*cos(f3 - g3 + 2*t2)
+	
