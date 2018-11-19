@@ -1,8 +1,10 @@
 # LR_Vmin
-analyze the scalar potential of the left-right symmetry model
+code used in the work arXiv:1811.06869 to analyze the scalar potential of the left-right symmetry model.
+If you use the code in your publication, please cite the paper 1811.06869.
 
 
-code used in the work arXiv:xxxx.xxxxx
+
+
 
 +++++++++++++++++++++++++++++++++++++
 
@@ -36,6 +38,5 @@ main.nb\For-Alpha123Beta123-plots:
 
 main.nb\For-m11m22-plots:
 
-	similar as the above part, except for m11m22 plots,
-	it invokes compute-mass.py and the data is in scan-mass-data/input*.h5 and scan-mass-data/result*.h5 
+	Obsolete. replaced by patch_m11m22.nb
 
